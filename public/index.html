@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Micro Blog</title>
+
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+
+  <!-- Optional theme -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+
+
+  <div class="jumbotron">
+    <div class = "container">
+      <h1 id ="header">Ranter</h1>
+      <p id = "subheader">Complain,whine,rant...anonymously</p>
+    </div>
+  </div>
+
+
+    <!-- underscore template -->
+    <div id="blog-container"></div>
+
+    <script type="text/template" id="blog-template">
+    <!--One Blog-->
+    <div class="row margin-top-20 blog-container" class="newBlog" >
+    <div class="col-sm-3"></div>
+    
+    <div class="margin-top-20">
+      </div>
+    <h2>
+    <div>
+    <span class="bold"></span><span><%= rant %></span>
+      </div>
+      </h2>
+      <p>
+    <div>
+    <span class="bold">User Name: </span><span><%= userName %></span>
+    </div>
+    </p>
+    <div class="col-sm-9"></div>
+    </div>
+    <!--/One Blog-->
+    </script>
+  </div>
+
+  <div class="container" >
+    <div class="margin-top-20">
+
+      <a href="#" data-toggle="modal"  data-target="#add-blog-modal" class="btn btn-primary">Whine</a>
+    </div>
+
+  <!--Add Blog Modal-->
+  <div id="add-blog-modal" class="modal fade">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close" id="addBlog" ><span aria-hidden="true">&times;</span></butto>
+          <h4 class="modal-title"></h4>
+        </div>
+        <div class="modal-body">
+          <div class="margin-top-20"></div>
+          <div class="bold margin-top-20">
+            Rant
+          </div>
+          <div class="margin-top-20">
+            <input id="rant" type="text" class="form-control" />
+          </div>
+          <div class="bold margin-top-20">
+            User Name
+          </div>
+          <div class="margin-top-20">
+            <input id="author" type="text" class="form-control" />
+          </div>
+          
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          <button id="save-book" type="button" class="btn btn-primary">WAH</button>
+        </div>
+      </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+  </div><!-- /.modal -->
+  <!--/Add Book Modal-->
+
+  <!--jQuery-->
+  <script src="http://code.jquery.com/jquery-2.1.3.min.js"></script>
+
+  <!--Underscore-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
+
+  <!-- Latest compiled and minified JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+
+  <script src="scripts.js"></script>
+
+</body>
+</html>
